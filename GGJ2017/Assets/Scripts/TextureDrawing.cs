@@ -163,4 +163,17 @@ public class TextureDrawing : MonoBehaviour {
 			return true;
 		}
 	}
+
+	public float paintRate(){
+		int painted = 0;
+		for (int x = 0; x < 1000; x++) {
+			for (int y = 0; y < 1000; y++) {
+				Color c = lastCacheTexture.GetPixel (x, y);
+				if (c.a > 0f) {
+					painted++;
+				}
+			}
+		}
+		return (float)((float)painted / 1000000f);
+	}
 }

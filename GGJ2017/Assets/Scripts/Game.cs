@@ -61,12 +61,14 @@ public class Game : MonoBehaviour
 			if (player.life <= 0) {
 				player.life = 0;
 				Debug.Log ("Die");
-				resultText.text = "Filled 30% of the canvas.";
+
+				FindObjectOfType<TextureDrawing> ().saveDieTexture ();
+				float rate = FindObjectOfType<TextureDrawing> ().paintRate ()*100f;
+				resultText.text = "Filled "+ (int)rate +"% of the canvas.";
 				resultText.gameObject.SetActive (true);
 				jokeText.gameObject.SetActive (true);
 				resultAnim.Stop ();
 				resultAnim.Play ();
-				FindObjectOfType<TextureDrawing> ().saveDieTexture ();
 				isRun = false;
 			}
 			UpdateProgress ();
