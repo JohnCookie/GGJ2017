@@ -46,21 +46,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ColorChange.cs" />
      <Compile Include="Assets\Scripts\ExposionGenerate.cs" />
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\LineWave.cs" />
      <Compile Include="Assets\Scripts\LineWaveGenerate.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\RandomWave.cs" />
+     <Compile Include="Assets\Scripts\RandomWaveGenerate.cs" />
      <Compile Include="Assets\Scripts\RoundWave.cs" />
      <Compile Include="Assets\Scripts\RoundWaveGenerate.cs" />
      <Compile Include="Assets\Scripts\SpreadWave.cs" />
      <Compile Include="Assets\Scripts\SpreadWaveGenerate.cs" />
      <Compile Include="Assets\Scripts\TargetGenerater.cs" />
      <Compile Include="Assets\Scripts\TextureDrawing.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>E:/Dev/Unity5.5.0/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Dev/Unity5.5.0/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -75,9 +75,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>E:/Dev/Unity5.5.0/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>E:/Dev/Unity5.5.0/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>E:/Dev/Unity5.5.0/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>

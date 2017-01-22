@@ -23,7 +23,7 @@ public class Game : MonoBehaviour
 	public void startGame(){
 		currTime = 99f;
 		player.transform.localPosition = new Vector3 (10f, 10f, -1f);
-		player.life = 250f;
+		player.life = 160;
 		for (int i = 0; i < waveGenerater.transform.childCount; i++) {
 			Destroy (waveGenerater.transform.GetChild (i).gameObject);
 		}
@@ -89,7 +89,7 @@ public class Game : MonoBehaviour
 	}
 
 	void UpdateProgress(){
-		float scaleX = player.life / 250f;
+		float scaleX = player.life / 160;
 		progressView.transform.FindChild ("pro").localScale = new Vector3 (scaleX, 1f, 1f);
 	}
 

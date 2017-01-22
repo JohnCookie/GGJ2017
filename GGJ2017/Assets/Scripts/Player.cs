@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 	public Game m_game;
 
 	void Start(){
-		life = 250f;
+		life = 160;
 	}
 	// Update is called once per frame
 	void Update ()
@@ -117,11 +117,12 @@ public class Player : MonoBehaviour
 		if (col.tag == "Target") {
 			m_game.playSound (1);
 			Destroy (col.transform.parent.gameObject);
-			if (life + 40 >= 250) {
-				life = 250;
+			if (life + 20 >= 160) {
+				life = 160;
 			} else {
-				life = life + 40;
+				life = life + 20;
 			}
+			waveGenerater.generateRandomExplosion ();
 		}
 	}
 

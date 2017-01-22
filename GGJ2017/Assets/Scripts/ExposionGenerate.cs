@@ -7,9 +7,11 @@ public class ExposionGenerate : MonoBehaviour
 	public List<RoundWaveGenerate> roundwaveList = new List<RoundWaveGenerate>();
 	public List<LineWaveGenerate> linewaveList = new List<LineWaveGenerate> ();
 	public List<SpreadWaveGenerate> spreadwaveList = new List<SpreadWaveGenerate> ();
+	public List<RandomWaveGenerate> randomwaveList = new List<RandomWaveGenerate> ();
 	public GameObject roundWave;
 	public GameObject lineWave;
 	public GameObject spreadWave;
+	public GameObject randomWave;
 	public Game game;
 	// Use this for initialization
 	void Start ()
@@ -41,6 +43,14 @@ public class ExposionGenerate : MonoBehaviour
 		go.transform.eulerAngles = game.getGamePlayer ().transform.eulerAngles;
 		go.GetComponent<SpreadWaveGenerate> ().Init (game);
 		spreadwaveList.Add (go.GetComponent<SpreadWaveGenerate> ());
+	}
+
+	public void generateRandomExplosion(){
+		GameObject go = Instantiate (randomWave) as GameObject;
+		go.transform.SetParent (transform);
+		go.transform.position = new Vector3 (game.getGamePlayer().transform.position.x, game.getGamePlayer().transform.position.y, -0.1f);
+		go.GetComponent<RandomWaveGenerate> ().Init (game);
+		randomwaveList.Add (go.GetComponent<RandomWaveGenerate> ());
 	}
 
 	public bool checkCanMove(){
